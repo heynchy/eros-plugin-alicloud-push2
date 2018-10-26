@@ -11,7 +11,7 @@
 ### 1. Add dependency
 ```groovy
 	dependencies {
-	       implementation 'com.github.heynchy:eros-plugin-alicloud-push:0.0.4'
+	       implementation 'com.github.heynchy:eros-plugin-alicloud-push2:v0.0.5'
 	}
 ```
 ### 2. 在Application中初始化移动推送（可参考demo中的位置）
