@@ -7,11 +7,12 @@
 #### 基于Eros框架下的阿里云移动推送Android端的集成
        1. 可以将接受到的消息或通知内容传递至JS端以便后续的处理
        2. 可以指定某一消息的内容传递给JS端，其他的接收的消息不会传递
+       3. 添加账号绑定功能
 ## Usage
 ### 1. Add dependency
 ```groovy
 	dependencies {
-	       implementation 'com.github.heynchy:eros-plugin-alicloud-push2:v0.0.8'
+	       implementation 'com.github.heynchy:eros-plugin-alicloud-push2:v0.0.9'
 	}
 ```
 ### 2. 在Application中初始化移动推送（可参考demo中的位置）
@@ -87,6 +88,16 @@ globalEvent.addEventListener('pushMessage', function (options) {
      *        String messageId              // 消息/通知的ID
      */
 })
+```
+## JS端绑定账号功能的调用方法：
+```java
+           weex.requireModule('AliPushModule').bindAccount({
+                account: 'A003001'
+            }, success => {
+                console.log("chy1234success====", success)
+            }, faliure => {
+                console.log("chy1234faliure====", faliure)
+            });
 ```
 
 
